@@ -2,14 +2,28 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+// app/Models/Siswa.php
 
-class Siswa extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class Siswa extends Authenticatable
 {
-    public function kelas(){
+    protected $fillable = [
+        'nama', 'nism', 'kelas_id', 'password'
+    ];
+
+    protected $hidden = [
+        'password',
+    ];
+
+    public function kelas()
+    {
         return $this->belongsTo(Kelas::class);
     }
-    public function user(){
-        return $this->belongsTo(User::class);
+
+    public function nilai()
+    {
+        return $this->hasOne(Nilai::class);
     }
 }
+

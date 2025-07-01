@@ -1,0 +1,72 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  background: linear-gradient(90deg, #7c3aed, #6366f1); /* ungu terang ke ungu biru */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 24px;
+  height: 54px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 46px;
+  height: 46px;
+}
+
+.logo-title {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.logo-sub {
+  font-size: 12px;
+  margin: 0;
+  color: #e0e7ff;
+}
+
+.navbar-right {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 8px rgba(255,255,255,0.35);
+}
+
+.logout {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+}
+
+.logout:hover {
+  background-color: #dc2626;
+}
